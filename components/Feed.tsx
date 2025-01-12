@@ -1,6 +1,7 @@
 import React from 'react';
 import PostInput from './PostInput';
 import Posts from './Posts';
+import { getAllPosts } from '@/lib/serveractions';
 
 type User = {
     id: string;
@@ -8,13 +9,14 @@ type User = {
     imageUrl?: string;
 };
 
-const Feed = ({ user }: { user?: User }) => {
+const Feed = async ({ user }: { user?: User }) => {
     const userData = user || { id: '', name: 'Guest', imageUrl: '/default-profile-photo.png' };
 
+    const posts = await getAllPosts();
     return (
         <div className='flex-1'>
             <PostInput user={userData} />
-            <Posts />
+            <Posts posts={posts} />
         </div>
     );
 };
