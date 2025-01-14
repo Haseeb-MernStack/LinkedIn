@@ -32,7 +32,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
         >
           <Navbar />
-          <div className="bg-[#f4f2ee] flex-1 w-full">
+          <div className="md:bg-[#f4f2ee] flex-1 w-full">
             <main className="max-w-6xl mx-auto">
               {children}
             </main>
