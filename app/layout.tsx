@@ -34,6 +34,7 @@ export default function RootLayout({
           <Navbar />
           <div className="md:bg-[#f4f2ee] flex-1 w-full">
             <main className="max-w-6xl mx-auto">
+              {/* children call */}
               {children}
             </main>
           </div>

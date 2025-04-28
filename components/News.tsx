@@ -1,10 +1,14 @@
 import { InfoIcon } from 'lucide-react';
 import React from 'react';
 
+// interface nav items
+
 interface NAVITEMS{
   heading: string,
   subHeading: string, 
 }
+
+// Nav items array.
 const newsItems:NAVITEMS[]=[
   {
     heading:"First news of the day.",
